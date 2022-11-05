@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --cor-primaria: rgb(50,50,255);
+  --cor-texto-primaria: rgb(240,240,240);
+}
+html{
+  font-size: 62.5%;
+  font-family: 'Puppins', sans-serif;
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  font-size: 1.8rem;
+  color: var(--cor-texto-primaria);
+}
+header{
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--cor-primaria);
+  padding-right: 2rem;
+  position: sticky;
+  overflow: hidden;
+}
+header ul{
+  list-style: none;
+}
+nav > ul{
+  display: flex;
+  justify-content: space-between;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+  font-size: 2.2rem;
+  display: inline-block;
+  padding: 2rem 2.5rem;
+  transition: background-color 0.2s linear;
+}
+header a:hover{
+  background-color: rgb(144, 39, 10);
+}
+section{
+  min-height: 100vh;
+}
+section#bem-vindo{
+  display: flex;
+  position: relative;
+  width: 80%;
+  height: 100%;
+  min-height: calc(100vh-200px);
+  margin: auto;
+  margin-top: 50px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  line-height: 120%;
+  background-color: rgb(18, 17, 17);
+}
+section#bem-vindo img{
+  width: 100%;
+  height: auto;
+}
+section#bem-vindo h1{
+  font-size: 1em;
+  text-align: center;
+}
+section#bem-vindo p{
+  margin-top: 5%;
+  text-align: center;
+  margin-left: 3%;
+  font-size: 1.5rem;
+  width: 90%;
+  height: 100%;
+  font-style: italic;
+  color: var(--cor-texto-primaria);
+}
+section#projetos {
+  padding: 10rem 2rem 5rem;
+  background-color: rgb(72, 97, 157);
+  text-align: center;
+}
+section#projetos > h2 {
+  text-align: center;
+  margin-bottom: 8rem;
+  font-size: 4.2rem;
+  padding-bottom: 0.4rem;
+  display: inline-block;
+  border-bottom: 2px solid var(--primary-text-color);
+}
+section#projetos > a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 4rem auto;
+  background-color: rgb(48, 56, 65);
+  font-size: 2rem;
+  transition: all 0.2s linear;
+}
+i {
+  transition: all 0.2s linear;
+}
+
+section#projetos > a:hover {
+  background-color: rgb(144, 39, 10);
+}
+.projetos-titulo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 
+  minmax(33rem, 1fr));
+  max-width: 136rem;
+  width: 100%;
+  margin: auto;
+  grid-column-gap: 4rem;
+  grid-row-gap: 6rem;
+}
+.projetos-titulo a {
+  padding: 0;
+  display: block;
+}
+
+figure {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+figcaption {
+  padding: 1.5rem;
+  margin-top: -1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 1rem 1rem;
+  background-color: rgb(48, 56, 65);
+  height: calc(100% - (100% - 8rem));
+}
+.projetos-titulo a:hover img {
+  opacity: 0.6;
+}
+
+.projetos-titulo a:hover figcaption {
+  background-color: rgb(144, 39, 10);
+}
+.projetos-titulo img {
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  transition: opacity 0.2s ease-in-out;
+  width: 100%;
+  height: calc(100% - 8rem);
+}
+section#contato {
+  background-color: rgb(48, 56, 65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+section#contato h2 {
+  font-size: 4rem;
+}
+
+section#contato p {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+section#contato p {
+  font-style: italic;
+  margin-bottom: 3.5rem;
+}
+
+section#contato ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section#contato i {
+  margin-right: 1rem;
+}
+section#contato a {
+  transition: transform 0.3s ease-out;
+}
+
+section#contato a:hover {
+  transform: translateY(0.8rem);
+}
+footer {
+  background-color: rgb(21, 52, 86);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 4px solid var(--primary-color);
+}
+footer a {
+  font-size: initial;
+  padding: initial;
+}
+@media (max-width: 1200px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+@media (max-width: 460px) {
+  html {
+    font-size: 50%;
+  }
+
+  header {
+    padding: 0;
+    justify-content: center;
+  }
+}
+@media (max-width: 300px) {
+  html {
+    font-size: 45%;
+  }
+
+  a {
+    padding: 2rem 1rem;
+  }
+}
